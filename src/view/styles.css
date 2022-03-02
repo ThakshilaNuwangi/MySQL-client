@@ -1,0 +1,5 @@
+.text-field, .text-field .viewport, .text-field .content {
+    -fx-background-color: transparent ;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 2px;
+}
