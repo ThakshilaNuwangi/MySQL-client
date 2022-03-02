@@ -91,7 +91,7 @@ public class LoginFormController {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/MainForm.fxml"));
                 AnchorPane root = fxmlLoader.load();
                 Scene MainScene = new Scene(root);
-                Stage stage = (Stage) txtUsername.getScene().getWindow();
+                Stage stage = new Stage();
                 stage.setScene(MainScene);
                 MainFormController controller = fxmlLoader.getController();
                 controller.initData(txtHost.getText(),
@@ -100,7 +100,8 @@ public class LoginFormController {
                         txtPassword.getText());
                 stage.centerOnScreen();
                 stage.setTitle("MySQL Client Shell");
-                /*((Stage) (txtUsername.getScene().getWindow())).close();*/
+                stage.show();
+                ((Stage) (txtUsername.getScene().getWindow())).close();
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

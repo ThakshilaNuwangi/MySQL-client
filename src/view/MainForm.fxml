@@ -3,10 +3,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="694.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+<AnchorPane prefHeight="712.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
     <children>
         <Label layoutX="329.0" layoutY="22.0" text="MySQL Client Shell" textFill="#07144d">
             <font>
@@ -26,6 +28,11 @@
         </Label>
         <TextArea fx:id="txtOutput" layoutX="31.0" layoutY="298.0" prefHeight="363.0" prefWidth="834.0" />
         <Button fx:id="btnExecute" defaultButton="true" layoutX="397.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnExecuteOnAction" prefHeight="49.0" prefWidth="102.0" text="Execute" />
+      <ImageView fitHeight="49.0" fitWidth="81.0" layoutX="793.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/mysql.png" />
+         </image>
+      </ImageView>
     </children>
 
 </AnchorPane>

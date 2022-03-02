@@ -42,9 +42,9 @@
             </Label>
          </children>
       </VBox>
-      <TextField fx:id="txtUsername" layoutX="124.0" layoutY="251.0" prefHeight="26.0" prefWidth="604.0" />
       <TextField fx:id="txtHost" layoutX="124.0" layoutY="151.0" prefHeight="26.0" prefWidth="604.0" text="localhost" />
       <TextField fx:id="txtPort" layoutX="124.0" layoutY="201.0" prefHeight="26.0" prefWidth="604.0" text="3306" />
+      <TextField fx:id="txtUsername" layoutX="124.0" layoutY="251.0" prefHeight="26.0" prefWidth="604.0" />
       <PasswordField fx:id="txtPassword" layoutX="124.0" layoutY="297.0" prefHeight="26.0" prefWidth="604.0" />
       <Label layoutX="22.0" layoutY="24.0" text="MySQL Client Shell">
          <font>
@@ -53,6 +53,11 @@
       </Label>
       <Line endX="252.0" layoutX="116.0" layoutY="75.0" startX="-100.0" />
       <Button fx:id="btnCancel" layoutX="192.0" layoutY="386.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="60.0" prefWidth="147.0" text="Cancel" />
-      <Button fx:id="btnConnect" layoutX="476.0" layoutY="386.0" mnemonicParsing="false" onAction="#btnConnectOnAction" prefHeight="60.0" prefWidth="147.0" text="Connect" />
+      <Button fx:id="btnConnect" defaultButton="true" layoutX="476.0" layoutY="386.0" mnemonicParsing="false" onAction="#btnConnectOnAction" prefHeight="60.0" prefWidth="147.0" text="Connect" />
+      <ImageView fitHeight="97.0" fitWidth="93.0" layoutX="705.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/mysql.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
