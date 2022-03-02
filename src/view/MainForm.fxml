@@ -6,26 +6,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="599.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+<AnchorPane prefHeight="694.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
     <children>
-        <Label layoutX="263.0" layoutY="26.0" text="MySQL Client Application" textFill="#07144d">
+        <Label layoutX="329.0" layoutY="22.0" text="MySQL Client Shell" textFill="#07144d">
             <font>
-                <Font name="Ubuntu Bold" size="21.0" />
+                <Font name="Ubuntu Bold" size="26.0" />
             </font>
         </Label>
-        <Label layoutX="14.0" layoutY="82.0" text="Command">
+        <Label layoutX="14.0" layoutY="90.0" text="Command">
             <font>
                 <Font name="Ubuntu Bold" size="15.0" />
             </font>
         </Label>
-        <TextArea fx:id="txtCommand" layoutX="31.0" layoutY="111.0" prefHeight="61.0" prefWidth="691.0" />
+        <TextArea fx:id="txtCommand" layoutX="31.0" layoutY="119.0" prefHeight="62.0" prefWidth="834.0" />
         <Label layoutX="14.0" layoutY="262.0" text="Output / Result">
             <font>
                 <Font name="Ubuntu Bold" size="15.0" />
             </font>
         </Label>
-        <TextArea fx:id="txtOutput" layoutX="23.0" layoutY="300.0" prefHeight="244.0" prefWidth="691.0" />
-        <Button fx:id="btnExecute" defaultButton="true" layoutX="343.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnExecuteOnAction" prefHeight="36.0" prefWidth="82.0" text="Execute" />
+        <TextArea fx:id="txtOutput" layoutX="31.0" layoutY="298.0" prefHeight="363.0" prefWidth="834.0" />
+        <Button fx:id="btnExecute" defaultButton="true" layoutX="397.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnExecuteOnAction" prefHeight="49.0" prefWidth="102.0" text="Execute" />
     </children>
 
 </AnchorPane>

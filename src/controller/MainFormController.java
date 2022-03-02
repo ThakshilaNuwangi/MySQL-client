@@ -27,7 +27,7 @@ public class MainFormController {
             mysql.getOutputStream().flush();
 
             txtCommand.getScene().getWindow().setOnCloseRequest(event -> {
-                if (mysql.isAlive()){
+                if (mysql.isAlive()) {
                     mysql.destroy();
                 }
             });
