@@ -15,20 +15,27 @@ public class MainFormController {
     public Button btnExecute;
     private Process mysql;
 
+    public void initialize () {
+        txtOutput.setWrapText(true);
+    }
+
     public void initData(String host, String port, String username, String password) {
         try {
-            mysql = new ProcessBuilder("mysql",
+             ProcessBuilder mysqlBuilder= new ProcessBuilder("mysql",
                     "-h", host,
-                    "--port", port,
                     "-u", username,
-                    "-p").start();
+                    "--port", port,
+                    "-n",
+                    "-p",
+                    "-v");
+            this.mysql=mysqlBuilder.start();
 
-            mysql.getOutputStream().write(password.getBytes());
-            mysql.getOutputStream().flush();
+            this.mysql.getOutputStream().write((password+"\n").getBytes());
+            this.mysql.getOutputStream().flush();
 
             txtCommand.getScene().getWindow().setOnCloseRequest(event -> {
-                if (mysql.isAlive()) {
-                    mysql.destroy();
+                if (this.mysql.isAlive()) {
+                    this.mysql.destroy();
                 }
             });
 
@@ -47,14 +54,23 @@ public class MainFormController {
             statement += ";";
         }
         try {
-            System.out.println(mysql.isAlive());
+            /*System.out.println(mysql.isAlive());
             mysql.getOutputStream().write(statement.getBytes());
             mysql.getOutputStream().flush();
 
             InputStream is = mysql.getErrorStream();
             byte[] buffer = new byte[1024];
             System.out.println(is.read(buffer));
+            txtOutput.setText(new String(buffer));*/
+
+            this.mysql.getOutputStream().write((statement + "\n").getBytes());
+            this.mysql.getOutputStream().flush();
+
+            InputStream is = this.mysql.getInputStream();
+            byte[] buffer = new byte[1024];
+            System.out.println(is.read(buffer));
             txtOutput.setText(new String(buffer));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
