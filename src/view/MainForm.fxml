@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="712.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+<AnchorPane prefHeight="831.0" prefWidth="1046.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
     <children>
-        <Label layoutX="329.0" layoutY="22.0" text="MySQL Client Shell" textFill="#07144d">
+        <Label layoutX="404.0" layoutY="22.0" text="MySQL Client Shell" textFill="#07144d">
             <font>
                 <Font name="Ubuntu Bold" size="26.0" />
             </font>
@@ -20,19 +20,24 @@
                 <Font name="Ubuntu Bold" size="15.0" />
             </font>
         </Label>
-        <TextArea fx:id="txtCommand" layoutX="31.0" layoutY="119.0" prefHeight="62.0" prefWidth="834.0" />
-        <Label layoutX="14.0" layoutY="262.0" text="Output / Result">
+        <TextArea fx:id="txtCommand" layoutX="31.0" layoutY="119.0" prefHeight="71.0" prefWidth="984.0" />
+        <Label layoutX="32.0" layoutY="276.0" text="Output / Result">
             <font>
                 <Font name="Ubuntu Bold" size="15.0" />
             </font>
         </Label>
-        <TextArea fx:id="txtOutput" layoutX="31.0" layoutY="298.0" prefHeight="363.0" prefWidth="834.0" />
-        <Button fx:id="btnExecute" defaultButton="true" layoutX="397.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnExecuteOnAction" prefHeight="49.0" prefWidth="102.0" text="Execute" />
-      <ImageView fitHeight="49.0" fitWidth="81.0" layoutX="793.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+        <TextArea fx:id="txtOutput" layoutX="31.0" layoutY="348.0" prefHeight="441.0" prefWidth="984.0" />
+        <Button fx:id="btnExecute" defaultButton="true" layoutX="472.0" layoutY="219.0" mnemonicParsing="false" onAction="#btnExecuteOnAction" prefHeight="49.0" prefWidth="102.0" text="Execute" />
+      <ImageView fitHeight="49.0" fitWidth="81.0" layoutX="951.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/mysql.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblSchema" layoutX="32.0" layoutY="317.0" text="SCHEMA : No schema selected" textFill="#618ad7">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>

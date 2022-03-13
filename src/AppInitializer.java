@@ -18,7 +18,7 @@ public class AppInitializer extends Application {
         Scene mainScene = new Scene(root);
         primaryStage.setScene(mainScene);
         mainScene.getStylesheets().add("/view/styles.css");
-        primaryStage.setTitle("Text Area Demo");
+        primaryStage.setTitle("MySQL Client : Home");
         primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
         primaryStage.show();

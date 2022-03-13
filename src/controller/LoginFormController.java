@@ -99,7 +99,7 @@ public class LoginFormController {
                         txtUsername.getText(),
                         txtPassword.getText());
                 stage.centerOnScreen();
-                stage.setTitle("MySQL Client Shell");
+                stage.setTitle("MySQL Client : Shell");
                 stage.show();
                 ((Stage) (txtUsername.getScene().getWindow())).close();
             }
